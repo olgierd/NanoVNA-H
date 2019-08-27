@@ -103,7 +103,7 @@ int awd_count;
 char kp_buf[11];
 int8_t kp_index = 0;
 
-
+void nyan(void);
 void ui_mode_normal(void);
 void ui_mode_menu(void);
 void ui_mode_numeric(int _keypad_mode);
