@@ -386,6 +386,7 @@ enum {
   MT_BLANK,
   MT_SUBMENU,
   MT_CALLBACK,
+  MT_NYANCAT,
   MT_CANCEL,
   MT_CLOSE
 };
@@ -928,6 +929,9 @@ void menu_invoke(int item)
   case MT_CLOSE:
     ui_mode_normal();
     break;
+    
+  case MT_NYANCAT:
+    nyan();
 
   case MT_CANCEL:
     menu_move_back();
@@ -1278,6 +1282,10 @@ draw_numeric_area(void)
   draw_numeric_input(buf);
 }
 
+void 
+nyan() {
+  chThdSleepMilliseconds(2000);
+}
 
 void
 ui_mode_menu(void)
